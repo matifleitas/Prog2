@@ -15,7 +15,7 @@ public class Muebleria {
 
     public double calcularCostoFab(){
         int sumaTotal = 0;
-        for (Mueble mueble: listaMuebles) {
+        for (Mueble mueble: listaMuebles) { //Itera por cada valor en el arrayList
             sumaTotal+= mueble.getCostoFabric();
         }
         return sumaTotal;

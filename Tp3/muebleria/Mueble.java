@@ -16,7 +16,7 @@ public class Mueble {
         this.costoFabric = costoFabric;
         this.tipoMadera = tipoMadera;
         this.color = color;
-        valorVenta = calcularValorVenta(ganancia);
+        this.valorVenta = calcularValorVenta(ganancia);
     }
 
     public double calcularValorVenta(double ganancia){
