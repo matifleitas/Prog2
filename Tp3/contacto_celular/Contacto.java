@@ -83,7 +83,4 @@ public class Contacto {
 	public void setDireccion_mail(String direccion_mail) {
 		this.direccion_mail = direccion_mail;
 	}
-
-	
-	
 }

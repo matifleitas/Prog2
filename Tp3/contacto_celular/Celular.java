@@ -4,14 +4,11 @@ import java.util.ArrayList;
 
 public class Celular {
 	private ArrayList<Contacto> listaContactos;
-	private ArrayList<Contacto> listContactosRepetidos;
-	//private String ciudad_del_contacto;
-	
+	private ArrayList<Contacto> listContactosRepetidos;	
 	
 	public Celular() {
 		listaContactos = new ArrayList<Contacto>();
 		listContactosRepetidos = new ArrayList<Contacto>();
-		//this.ciudad_del_contacto = ciudad_del_contacto;
 	}
 	
 //	public String mostrarInformacion(Contacto contactoNuevo) {
@@ -47,16 +44,7 @@ public class Celular {
 		return listaContactos;
 	}
 
-//	public void setListaContactos(ArrayList<Contacto> listaContactos) {
-//		this.listaContactos = listaContactos;
-//	}
-
 	public ArrayList<Contacto> getListContactosRepetidos() {
 		return listContactosRepetidos;
 	}
-
-//	public void setListContactosRepetidos(ArrayList<ContactoRepetido> listContactosRepetidos) {
-//		this.listContactosRepetidos = listContactosRepetidos;
-//	}
-
 }
