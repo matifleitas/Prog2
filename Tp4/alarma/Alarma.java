@@ -1,68 +1,64 @@
 package alarma;
 
 public class Alarma {
-	private int codigo_alarma;
-	private boolean se_rompio_vidrio;
-	private boolean se_abrio_puerta;
-	private boolean se_abrio_ventana;
-	private boolean se_detecto_mov;
+	private Timbre timbre;
+	private boolean sensor_vidrio;
+	private boolean sensor_puerta;
+	private boolean sensor_movimiento;
 
-	
-	public Alarma(int codigo_alarma, boolean se_rompio_vidrio, boolean se_abrio_puerta, boolean se_abrio_ventana, boolean se_detecto_mov) {
-		this.codigo_alarma = codigo_alarma;
-		this.se_rompio_vidrio = se_rompio_vidrio;
-		this.se_abrio_puerta = se_abrio_puerta;
-		this.se_abrio_ventana = se_abrio_ventana;
+	public Alarma() {
+		sensor_vidrio=false;
+		sensor_puerta=false;
+		sensor_movimiento=false;
+		timbre = new Timbre();
 	}
 	
 	public void comprobar() {
-		if(seActivoAlguna()) {
-			this.activarSeñalSonora();
-			this.activarLuz();
-		}
-	}
-	
-	public boolean seActivoAlguna() {
-		if((this.se_rompio_vidrio  || this.se_abrio_puerta ||  this.se_abrio_ventana || this.se_detecto_mov) == true) {
-			return true;
+		if(this.sensor_movimiento || this.sensor_puerta || this.sensor_vidrio) {
+			this.timbre.hacerSonar();
 		} else {
-			return false;
+			this.timbre.todoEnOrden();
 		}
 	}
 	
-	public void activarSeñalSonora() {
-		//System.out.println(" - ");
-		
+	public void hacerSonar() {
+		this.timbre.hacerSonar();
 	}
 	
-	public void activarLuz() {
-		//System.out.println(" - ");
-		
+	public void todoEnOrden() {
+		this.timbre.todoEnOrden();
+	}
+	
+	public void seRompioVidrio() {
+		this.sensor_vidrio = true;
+	}
+	
+	public void seAbrioPuerta() {
+		this.sensor_puerta = true;
+	}
+	
+	public boolean isSensor_vidrio() {
+		return sensor_vidrio;
 	}
 
-
-	public int getCodigo_alarma() {
-		return codigo_alarma;
+	public void setSensor_vidrio(boolean sensor_vidrio) {
+		this.sensor_vidrio = sensor_vidrio;
 	}
 
-
-	public boolean isSe_rompio_vidrio() {
-		return se_rompio_vidrio;
+	public boolean isSensor_puerta() {
+		return sensor_puerta;
 	}
 
-
-	public boolean isSe_abrio_puerta() {
-		return se_abrio_puerta;
+	public void setSensor_puerta(boolean sensor_puerta) {
+		this.sensor_puerta = sensor_puerta;
 	}
 
-
-	public boolean isSe_abrio_ventana() {
-		return se_abrio_ventana;
+	public boolean isSensor_movimiento() {
+		return sensor_movimiento;
 	}
 
-
-	public boolean isSe_detecto_mov() {
-		return se_detecto_mov;
+	public void setSensor_movimiento(boolean sensor_movimiento) {
+		this.sensor_movimiento = sensor_movimiento;
 	}
 	
 	
