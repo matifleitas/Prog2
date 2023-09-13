@@ -1,7 +1,8 @@
 package centro_computos;
 
 
-public class CentroComputo { 
+public class CentroComputo { /*se encarga de add pc y procesos(tamb chequear que no esten vacios) 
+								y que haya tareas asignadas a las pc*/
 	private ColaEspera computadoras;
 	private ColaEspera procesos;
 
@@ -14,10 +15,10 @@ public class CentroComputo {
 		if(compu==null)return;//control previo que no envien objeto null
 		
 		if(procesos.hayElementos()) {
-			Proceso proceso = (Proceso) procesos.getSiguiente();
+			Proceso proceso = (Proceso) procesos.getSiguiente();//elimino un proc q estaba esperando para asignarselo a una pc
 			compu.asignarProceso(proceso);
 		}else {
-			computadoras.addElemetno(compu);
+			computadoras.addElemetno(compu);//agrego una pc a la espera
 		}
 	}
 	

@@ -21,11 +21,12 @@ public class ColaEspera { //esta clase mantiene cosas ordenadas
 		return !elementos.isEmpty();
 	}
 	
-	public void addElemetno(TipoElementoCola elemento) {
+	public void addElemetno(TipoElementoCola elemento) {/*recibe un elemento para poder 
+														comparar sin que obj sea*/
 		boolean inserto = false;
 		int i=0;
 		while(!inserto && i<elementos.size()) {
-			if(elemento.esMayor(elementos.get(i))) {
+			if(elemento.esMayor(elementos.get(i))) {//elemento es mayor que la pos del array?
 				elementos.add(i, elemento);
 				inserto=true;
 			} else {

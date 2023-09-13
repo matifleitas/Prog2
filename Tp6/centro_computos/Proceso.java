@@ -20,7 +20,7 @@ public class Proceso extends TipoElementoCola{
 	@Override
 	public boolean esMayor(TipoElementoCola elementoN) {
 		return this.getMemoriaRequerida() > ((Proceso) elementoN).getMemoriaRequerida();
-		
+											//cast de elemento a Proceso
 	}
 
 	@Override

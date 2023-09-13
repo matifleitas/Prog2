@@ -32,9 +32,7 @@ public class Computadora extends TipoElementoCola{
 	@Override
 	public boolean esMayor(TipoElementoCola elementoN) {
 		return this.getVelocidadCPU() > ((Computadora)elementoN).getVelocidadCPU();
+										//cast de elemento a Computadora
 	}
-	
-	
-	
 	
 }
