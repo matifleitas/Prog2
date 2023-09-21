@@ -7,19 +7,17 @@ public class Lote {
 	private String nombre;
 	private ArrayList<String> minerales;
 	private double tamaño;
+	
 	public Lote(String nombre, double tamaño) {
-		super();
+	
 		this.nombre = nombre;
 		this.tamaño = tamaño;
 		this.minerales = new ArrayList<String>();
 	}
 	
 	public boolean sePuedeSembrar(Cereal cereal) {
-		
 		return cereal.sePuedeSembrarEn(this);
 				//this.minerales.containsAll(cereal.getMinerales()); // No delega la responsabilidad
-		
-		
 	}
 	
 	public boolean tieneMineral(String mineral) {
@@ -41,9 +39,4 @@ public class Lote {
 	public void setTamaño(double tamaño) {
 		this.tamaño = tamaño;
 	}
-	
-	
-	
-	
-
 }

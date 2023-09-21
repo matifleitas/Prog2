@@ -12,7 +12,6 @@ public class Cooperativa {
 		for (int i = 0; i < this.mineralesPrimarios.size(); i++)
 			if (lote.tieneMineral(this.mineralesPrimarios.get(i)))
 				return true;
-		
 		return false;
 	}
 	
@@ -32,11 +31,6 @@ public class Cooperativa {
 			if (cereal.sePuedeSembrarEn(lote))
 				listado.add(lote);
 		}
-		
 		return listado;
 	}
-	
-	
-	
-
 }
