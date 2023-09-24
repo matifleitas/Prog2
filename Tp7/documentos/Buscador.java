@@ -18,7 +18,10 @@ public class Buscador {
 			if(con.siCumple(doc)) {
 				docsQueCumplen.add(doc);
 			}
-		} return docsQueCumplen;
+		}if(docsQueCumplen.isEmpty()) {
+			System.out.println(" \n No hay documentos que cumplan esta condicion");
+		}
+		return docsQueCumplen;
 	}
 	
 	public void addDocumento(Documento doc) {
@@ -36,5 +39,6 @@ public class Buscador {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
 }
 

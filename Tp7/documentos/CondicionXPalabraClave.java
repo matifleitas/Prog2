@@ -3,12 +3,11 @@ package documentos;
 import java.util.ArrayList;
 
 public class CondicionXPalabraClave extends Condicion {
-
-	private Buscador arrayDocs;
+	
 	private String fraseOtitulo;
 	
 	public CondicionXPalabraClave(String fraseOtitulo) {
-//		arrayDocs = arrayDocs;
+
 		this.fraseOtitulo = fraseOtitulo;
 	}
 
@@ -21,11 +20,5 @@ public class CondicionXPalabraClave extends Condicion {
 			} 
 		} return false;
 	}
-	
-//	public boolean contienePlabraClave(Documento d) {
-//		for(int i=0; i<d.getPalabrasClaves().size(); i++) {
-//			if(d.)
-//		}
-//	}
 
 }
