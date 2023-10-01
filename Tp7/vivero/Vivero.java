@@ -11,7 +11,7 @@ public class Vivero {
 		plantas = new ArrayList<>();
 	}
 	
-	public ArrayList<Planta> buscarPlantas(Condicion c){
+	public ArrayList<Planta> buscarPlantas(CondicionVivero c){
 		ArrayList<Planta> plantasQCumplen = new ArrayList<>();
 		
 		for(int i=0; i<this.plantas.size(); i++) {

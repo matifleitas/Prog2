@@ -15,8 +15,8 @@ public class Planta {
 		this.clasificacion = clasificacion;
 		this.flia = flia;
 		this.clase = clase;
-		this.luminosidad = luminosidad;
-		this.cantAgua = cantAgua;
+		this.luminosidad = verificarValores(luminosidad);
+		this.cantAgua = verificarValores(cantAgua);
 	}
 	
 	public ArrayList<String> getNombresVulgares(){
@@ -25,6 +25,14 @@ public class Planta {
 	
 	public void addNombreVulgar(String n) {
 		this.nombreVulgar.add(n);
+	}
+	
+	public int verificarValores(int valor) {
+		if(valor > MAX_SOL || valor < MIN_SOL) {
+			return -1;
+		} else {
+			return valor;
+		}
 	}
 	
 	public void addClasificacion(String c) {

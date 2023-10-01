@@ -1,6 +1,6 @@
 package vivero;
 
-public class CondicionXAuereum extends Condicion {
+public class CondicionXAuereum extends CondicionVivero {
 
 	private String nombre;
 	
