@@ -6,8 +6,8 @@ public class Cereal {
 
 	private String nombre;
 	private ArrayList<String> minerales;
+	
 	public Cereal(String nombre) {
-		super();
 		this.nombre = nombre;
 		this.minerales = new ArrayList<String>();
 	}
