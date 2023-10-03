@@ -30,8 +30,8 @@ public class Plataforma {
 			Pelicula peliculaPos = this.peliculas.get(i);
 			if(r.esRentable(peliculaPos)) {
 				pelisRentables.add(peliculaPos);
-				System.out.println("ES RENTABLE");
-			}
+				System.out.println("Las siguientes peliculas son rentables: "+"\n");
+			} 
 		}return pelisRentables;
 	}
 
