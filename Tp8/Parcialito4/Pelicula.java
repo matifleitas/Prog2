@@ -3,7 +3,7 @@ package Parcialito4;
 import java.util.ArrayList;
 
 public class Pelicula {
-	private final int EDAD_MIN = 13;
+	//private final int EDAD_MIN = 13;
 	private String titulo, sinopsis, director;
 	private ArrayList<String> generos, actores;
 	private int anio_estreno, minutos, edad;

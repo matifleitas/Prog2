@@ -1,7 +1,5 @@
 package puertoCereales;
 
-import centro_computos.Computadora;
-import centro_computos.Proceso;
 
 public class Puerto {
 	private ColaEspera barcos;
@@ -16,7 +14,7 @@ public class Puerto {
 		if(camion==null)return;
 		
 		if(barcos.tieneElementos() && !camion.isDescargando()) {
-			Barco barco = ((Barco)barcos.getSiguienteYEliminaUno());//elimino un barco de la espera
+			Barco barco = ((Barco)barcos.getSiguienteYEliminaUno());
 			camion.asignarBarco(barco); //se le asigno un barco a un camion
 			camion.setDescargando(true);
 		} else {
@@ -27,7 +25,7 @@ public class Puerto {
 	public void addBarco(Barco barco) {
 		if(barco==null);
 		
-		if(camiones.tieneElementos() && !barco.isCargando()) {//si hay camiones esperando
+		if(camiones.tieneElementos() && !barco.isCargando()) {
 			Camion camion = ((Camion)camiones.getSiguienteYEliminaUno());
 			barco.asignarCamion(camion);
 			barco.setCargando(true);

@@ -96,14 +96,5 @@ public class Planta {
 	        	"Familia: " + this.getFlia() + "\t\t\t\tSol: " + this.getLuminosidad() + "\n"+
 	        	"------------------------------------------------------------------" + "\n";
 	}
-//	@Override
-//	public String toString() {
-//		  String resultado = "";
-//	        resultado += "Nombre Científico: " + this.getNombreCientifico() + "\t\tClase: " + this.getClase() + "\n";
-//	        resultado += "Nombres vulgares: " + this.getNombresVulgares() /*+ "\t\t" + this.getPlantaInterior*/ + "\n";
-//	        resultado += "Clasificación superior: " + this.clasificacion + "\t\tRiego: " + this.getCantAgua() + "\n";
-//	        resultado += "Familia: " + this.getFlia() + "\t\tSol: " + this.getLuminosidad() + "\n";
-//	        return resultado ;
-//	}
 	
 }

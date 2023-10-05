@@ -16,8 +16,9 @@ public class ColaEspera {
 	
 	public void addElemento(ElementoCola elemento) {
 		boolean inserto=false;
+		int tamanio = elementos.size();
 		int i=0;
-			while(!inserto && i<elementos.size()) { 
+			while(!inserto && i < tamanio) { 
 				if(elemento.esMayor(elementos.get(i))) {
 					elementos.add(i, elemento);
 					inserto=true;

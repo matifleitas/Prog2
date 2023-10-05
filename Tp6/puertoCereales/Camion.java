@@ -16,7 +16,7 @@ public class Camion extends ElementoCola{
 	}
 
 	@Override
-	public boolean esMayor(ElementoCola elementoN)/*elementoN es el del array de colaEspera*/ {
+	public boolean esMayor(ElementoCola elementoN) {
 		return (this.getFecha_carga()).isBefore(((Camion)elementoN).getFecha_carga());
 	}
 	
