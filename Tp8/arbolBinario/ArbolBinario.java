@@ -28,17 +28,10 @@ public class ArbolBinario {
 		return nodoInstanciado;
 	}
 	
-	public void imprimirEnOrden() {
-        imprimirEnOrdenRec(raiz);
-    }
 
-    public void imprimirEnOrdenRec(Nodo nodo) {
-        if (nodo != null) {
-            imprimirEnOrdenRec(nodo.getIzquierda());
-            System.out.print(nodo.getValor() + "-");
-            imprimirEnOrdenRec(nodo.getDerecha());
-        }
-    }
+	public Nodo getRaiz() {
+		return raiz;
+	}
 	
 
 }

@@ -30,4 +30,27 @@ public class Nodo {
 	public void setDerecha(Nodo derecha) {
 		this.derecha = derecha;
 	}
+
+	@Override
+	public String toString() {
+		return "[Nodo] -> valor:" + valor + ", izquierda:" + izquierda + ", derecha:" + derecha + "\n";
+	}
+	
+	public void recorrerArbol(AccionEjecutable accion) {
+		boolean terminoRamaIzquierda = false;
+		
+		if(this.getIzquierda() != null && !terminoRamaIzquierda) {
+			this.getIzquierda().recorrerArbol(accion);//apunta al objeto de la izquierda del objeto actual
+		} else {
+			terminoRamaIzquierda = true;
+		}
+		
+		
+		if(this.getDerecha() != null && terminoRamaIzquierda) {
+			this.getDerecha().recorrerArbol(accion);
+		}
+		
+		accion.ejecutarNodo(this);
+	}
+	
 }
