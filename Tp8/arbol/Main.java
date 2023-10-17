@@ -3,6 +3,7 @@ package arbol;
 public class Main {
 
 	public static void main(String[] args) {
+		
 	Arbol arbol = new Arbol();
 		
 		arbol.add(5);
@@ -18,6 +19,8 @@ public class Main {
 		arbol.add(12);
 		arbol.add(9);
 		arbol.print();
+
+		System.out.println(arbol.getArray());
 
 	}
 

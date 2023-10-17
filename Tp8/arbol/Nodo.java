@@ -1,6 +1,7 @@
 package arbol;
 
-public class Nodo {
+public class Nodo implements Comparable<Nodo>{
+
 	private Integer valor;
 	private Nodo nodoIzq;
 	private Nodo nodoDer;
@@ -10,24 +11,24 @@ public class Nodo {
 		this.impPant = new ImprimirPantalla();
 	}
 	
-	public void add(int integer) {
+	public void addValor(int integer) {
 		if(valor == null) {
 			this.valor = integer;
 		} 
 		else if(integer < valor) {	
 			if(this.nodoIzq != null) {
-				this.nodoIzq.add(integer);
+				this.nodoIzq.addValor(integer);
 			} else {
 				this.nodoIzq = new Nodo();
-				this.nodoIzq.add(integer);
+				this.nodoIzq.addValor(integer);
 			}
 		}
 		else if(integer > valor) {
 			if(this.nodoDer != null) {
-				this.nodoDer.add(integer);
+				this.nodoDer.addValor(integer);
 			} else {
 				this.nodoDer = new Nodo();
-				this.nodoDer.add(integer);
+				this.nodoDer.addValor(integer);
 			}
 		}
 	}
@@ -48,6 +49,9 @@ public class Nodo {
 	public String toString() {
 		return "valor: " + valor + "";
 	}
-	
-	
+
+	@Override
+	public int compareTo(Nodo otro) {
+        return Integer.compare(this.valor, otro.valor);
+	}
 }
