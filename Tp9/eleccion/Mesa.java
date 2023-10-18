@@ -8,11 +8,13 @@ public class Mesa {
 	private ArrayList<String> padron;
 	private ArrayList<Voto> votosMesa;
 	private int cantVotosBlanco;
+	private Elemento elem;
 	
 	public Mesa() {
 		cantVotosBlanco=0;
 		padron = new ArrayList<>();
 		votosMesa = new ArrayList<>();
+		elem.addMesa(this);
 	}
 	
 	public double porcentajes(Condicion c) {
