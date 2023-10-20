@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import fyleSystemComarator.Elemento;
-import predio.Filtro;
-import predio.Socio;
-
 public class Aseguradora{
 	private String nombre;
 	private ArrayList<Elemento> listaDeSeguros;
