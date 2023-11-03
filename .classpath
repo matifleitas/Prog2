@@ -9,7 +9,7 @@
 	<classpathentry kind="src" path="Tp6"/>
 	<classpathentry kind="src" path="Tp7"/>
 	<classpathentry kind="src" path="Tp8"/>
-	<classpathentry kind="src" path="Tp9"/>
+	<classpathentry kind="src" path="Tp9YTp10"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

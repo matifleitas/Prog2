@@ -12,6 +12,6 @@ public class CondicionMaterial extends Condicion{
 	
 	@Override
 	public boolean cumple(Mueble m) {
-		return m.getMaterial().equals(this.material);
+		return m.getMaterial().equals(this.material.toLowerCase());
 	}
 }
