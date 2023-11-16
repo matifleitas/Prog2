@@ -2,7 +2,7 @@ package parcial2023;
 
 import java.util.ArrayList;
 
-public abstract class ElementoPieza {
+public abstract class ElementoPieza implements Comparable<ElementoPieza>{
 	private String nombre;
 	private String descripcion;
 	
@@ -56,6 +56,13 @@ public abstract class ElementoPieza {
 	public static void setCostoSegundo(int costoSegundo) {
 		ElementoPieza.costoSegundo = costoSegundo;
 	}
+
+	@Override
+	public int compareTo(ElementoPieza e) {
+		return Integer.compare(this.getTiempo(), e.getTiempo());
+	}
+	
+//	protected abstract int compareTo(ElementoPieza e);
 }
 
 

@@ -1,6 +1,8 @@
 package parcial2023;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PiezaCompuesta extends ElementoPieza{
 	
@@ -22,7 +24,7 @@ public class PiezaCompuesta extends ElementoPieza{
 			suma += elementos.get(i).getPla();
 			
 		}return suma + getExtraPla() * this.getCantidadSimples();
-		//suma del pla necesario mas 1 gramo por cada pieza simple que la compone
+		//suma del PLA necesario mas 1 gramo por cada pieza simple que la compone
 	}
 
 	@Override
@@ -63,7 +65,16 @@ public class PiezaCompuesta extends ElementoPieza{
 	}
 
 	public void addElemento(ElementoPieza e) {
+		int pos=0;
+		while(pos<this.elementos.size() && elementos.get(pos).compareTo(e)<0) {
+			pos++;
+		}
+		elementos.add(pos, e);
+	}
+	
+	public void addElemento(ElementoPieza e, Comparator c) {
 		elementos.add(e);
+		Collections.sort(elementos, c);
 	}
 	
 	public int getExtraPla() {
@@ -82,5 +93,9 @@ public class PiezaCompuesta extends ElementoPieza{
 		this.extraTiempo = extraTiempo;
 	}
 	
+	public void mostrarElementos() {
+		System.out.println();
+	}
+
 	
 }
